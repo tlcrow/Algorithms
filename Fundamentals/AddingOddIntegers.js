@@ -17,6 +17,10 @@ function Shortcut(){
     var min = -300000;
     var max = 300000;
     var sum = 0
+
+    if(max == min){
+        console.log(min);
+    }
     if(max == Math.abs(min)){
         console.log(0);
     }
