@@ -1,19 +1,19 @@
-//Assume that you have a text field that is exactly 75 characters long. You want to fill it with spaces and asterisks, sometimes called stars.  You should print the given number of stars consecutively.  Depending on which function is called, those stars should be left-justified, right-justified, or centered (plus/minus one). Write a function that accepts a number and prints that many asterisks. Write a function that prints 75 characters total. Stars should build from the right side. Write function that prints 75 characters total.  the stars should be centered in the 75.
+//From StarArt, derive the following that accept and draw the given characters, not just asterisks.
 
-function drawLeftStars(num){
+function drawLeftChars(num, char){
     var textfield = "";
     if(num < 0){
         textfield.length = 75;
         console.log(textfield);
     }
     for(var i = 1; i <= num; i++){
-        textfield = textfield + "*";
+        textfield = textfield + char;
     }
     textfield.length = 75;
     console.log(textfield);
 }
 
-function drawRightStars(num){
+function drawRightChars(num, char){
     var textfield = "";
     if(num < 0){
         textfield.length = 75;
@@ -23,13 +23,13 @@ function drawRightStars(num){
         textfield = textfield + " ";
     }
     for(var i = num; i > 0; i--){
-        textfield = textfield + "*";
+        textfield = textfield + char;
     }
     textfield.length = 75;
     console.log(textfield);
 }
 
-function drawCenteredStars(num){
+function drawCenteredChars(num, char){
     var textfield = "";
     var half = Math.floor((75 - num) / 2);
     if(num < 0){
@@ -41,7 +41,7 @@ function drawCenteredStars(num){
            textfield = textfield + " ";
         }
         for(var i = num; i > 0; i--){
-            textfield = textfield + "*";
+            textfield = textfield + char;
         }
     }
     if(num % 2 == 1){
@@ -49,19 +49,19 @@ function drawCenteredStars(num){
            textfield = textfield + " ";
         }
         for(var i = num; i > 0; i--){
-            textfield = textfield + "*";
+            textfield = textfield + char;
         }
     }
     textfield.length = 75;
     console.log(textfield);
 }
 
-drawLeftStars(4);
-drawRightStars(4);
-drawCenteredStars(4);
-drawLeftStars(-1);
-drawRightStars(-1);
-drawCenteredStars(-1);
-drawLeftStars(76);
-drawRightStars(76);
-drawCenteredStars(76);
+drawLeftChars(4, "T");
+drawRightChars(4, "T");
+drawCenteredChars(4, "T");
+drawLeftChars(-1, "0");
+drawRightChars(-1, "0");
+drawCenteredChars(-1, "0");
+drawLeftChars(76, "$");
+drawRightChars(76, "$");
+drawCenteredChars(76, "$");
