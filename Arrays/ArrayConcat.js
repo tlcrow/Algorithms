@@ -4,14 +4,11 @@
 //Without built in methods
 function ArrayConcat(arr1, arr2){
     var newArr = [];
-    var count = 0;
     for(var i = 0; i < arr1.length; i++){
-        newArr[count] = arr1[i];                       //newArr.push(arr1[i]);
-        count = count + 1;
+        newArr[newArr.length] = arr1[i];                       //newArr.push(arr1[i]);
     }
     for(var i = 0; i < arr2.length; i++){
-        newArr[count] = arr2[i];                       //newArr.push(arr2[i]);
-        count = count + 1;
+        newArr[newArr.length] = arr2[i];                       //newArr.push(arr2[i]);
     }
     console.log(arr1);
     console.log(arr2);
