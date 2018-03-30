@@ -157,9 +157,7 @@ function fullDate(dayNum){
 }
 // fullDate(256);
 
-//Build fullDate2(dayNum) that will be given a 4-digit integer. This number can stretch into futures years.
-
-//need to make exception for year 2100, 2200, 2300
+//Build fullDate2(dayNum) to handle days up to 140,000. Make sure to take into account leap years.
 
 function fullDate2(dayNum){
     var year = 2018;
@@ -171,7 +169,7 @@ function fullDate2(dayNum){
     var count = 0;
     var leap = 22;
 
-    if(dayNum > 0 && dayNum < 140000){
+    if(dayNum > 0 && dayNum <= 140000){
         if(dayNum > 365){                   //To get year
             count = Math.floor(dayNum/365);
             year = year + count;
@@ -184,8 +182,7 @@ function fullDate2(dayNum){
         count = 0;                         //To get month
         for(var i = 0; count < dayNum; i++){ 
             leap = leap + 1;
-            console.log(leap);
-            if(leap % 48 == 0){         //2100-30010-1008, 2200-66535
+            if(leap % 48 == 0 && leap != 1008 && leap != 2208 && leap != 3408){       
                 count = count + 1;
             }
             count = count + monthToDays(i + 1);
@@ -199,7 +196,7 @@ function fullDate2(dayNum){
         leap = 22;                               //To get day
         for(var i = 0; count < dayNum - monthToDays(i + 1); i++){
             leap = leap + 1;
-            if(leap % 48 == 0){
+            if(leap % 48 == 0 && leap != 1008 && leap != 2208 && leap != 3408){
                 count = count + monthToDays(i + 1) + 1;
             }
             else{
@@ -217,6 +214,6 @@ function fullDate2(dayNum){
         console.log(week + ", " + month + " " + day + ", " + year);
         }
     }
-fullDate2(30010);
+fullDate2(140000);
 
-//Build fullDate3(dayNum) to handle days up to 140,000. 
+ 
