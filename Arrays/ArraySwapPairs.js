@@ -1,4 +1,4 @@
-//Swap positions of successive pairs of values of given array. If length is odd, do not change the final element. For [1,2,3,4], return [2,1,4,3].
+//Swap positions of successive pairs of values of given array. If length is odd, do not change the final element. For [1,2,3,4], return [2,1,4,3]. Do this in place without creating a new array.
 
 function SwapPairs(arr){
     var temp;
