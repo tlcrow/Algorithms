@@ -12,5 +12,6 @@ function shuffle(arr){
         arr[last] = temp;
     }
     console.log(arr);
+    return(arr);
 }
 shuffle([1,2,3,4,5,6]);
