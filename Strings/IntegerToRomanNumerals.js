@@ -61,6 +61,7 @@ function IntegerToRomanNumerals(num){
         }
     }
     console.log(newString);
+    return(newString);
 }
 IntegerToRomanNumerals(4);
 IntegerToRomanNumerals(349);
