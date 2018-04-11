@@ -7,7 +7,7 @@ function Acronyms(string){
             newStr = newStr + string[i];
         }
         else if(string[i] != " " && string[i - 1] == " "){
-            newStr =newStr + string[i];
+            newStr = newStr + string[i];
         }
     }
     console.log(newStr.toUpperCase());
