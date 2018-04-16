@@ -6,15 +6,15 @@ function generateCoinChange(cents){
     var nickels = 0;
     var pennies = 0;
     while(cents > 0){
-        if(cents - 25 > 0){
+        if(cents - 25 >= 0){
             quarters = quarters + 1;
             cents = cents - 25;
         }
-        else if(cents - 10 > 0){
+        else if(cents - 10 >= 0){
             dimes = dimes + 1;
             cents = cents - 10;
         }
-        else if(cents - 5 > 0){
+        else if(cents - 5 >= 0){
             nickels = nickels + 1;
             cents = cents - 5;
         }
