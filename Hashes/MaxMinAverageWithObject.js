@@ -15,6 +15,7 @@ function MaxMinAverageWithObjects(arr){
     }
     myAssoc.average = sum / arr.length;
     console.log(myAssoc);
+    return(myAssoc);
 }
 MaxMinAverageWithObjects([1,2,3,4,5]);
 MaxMinAverageWithObjects([4, 80, 23, 1]);

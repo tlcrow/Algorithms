@@ -33,6 +33,7 @@ function CoinChangeWithObject(cents){
         }
     }
     console.log(myAssoc);
+    return(myAssoc);
 }
 CoinChangeWithObject(99);
 CoinChangeWithObject(1);
